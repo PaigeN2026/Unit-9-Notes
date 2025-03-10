@@ -21,4 +21,20 @@ public class Car extends Vehicle {
         this.numSeats = numSeats;
         this.brand = brand;
     }
+    // Example of OVERRIDING a parent class method
+    public String toString() {
+        return ("Car[numWheels: " + this.getNumWheels() +
+        ", avgSpeed: " + this.getAvgSpeed() +
+        ", color: " + this.getColor() + 
+        ", numSeats: " + this.numSeats +
+        ", brand: " + this.brand + "]");
+    }
+
+    // OVERRIDE parent method 
+    public void makeNoise() {
+        // Use super.method() to call the parent's method FIRST
+        super.makeNoise();
+        // Then add on to that behavior
+        System.out.print("Beep beep... 💨");
+    }
 }

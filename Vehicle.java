@@ -24,4 +24,30 @@ public class Vehicle {
         this.color = color;
     }
 
+    // 3. METHODS
+
+    // toString method will get called when you pass an object to a print statement 
+    public String toString() {
+        return ("Vehicle[numWheels: " + this.numWheels +
+        ", avgSpeed: " + this.avgSpeed +
+        ", color: " + this.color + "]");
+    }
+
+    // ACCESSPR (GETTER) METHODS
+    public int getNumWheels() {
+        return this.numWheels;
+    }
+
+    public double getAvgSpeed() {
+        return this.avgSpeed;
+    }
+
+    public String getColor() {
+        return this.color;
+    }
+
+    // Behavior methods (can be OVERRIDDEN in child class)
+    public void makeNoise() {
+        System.out.println("Vroom Vroom... 💨");
+    }
 }
