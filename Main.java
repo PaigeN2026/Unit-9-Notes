@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Main {
 
    public static void main(String []args) {
@@ -17,7 +19,36 @@ public class Main {
 
       // Test behaviors methods
       v1.makeNoise();
-      c1.makeNoise(); 
+      c1.makeNoise();
+      
+      // POLYMORPHISM example:
+      // all classes in a hierarchy can be treated as instances of the TOP (most super) type
+
+      Vehicle v3 = new Vehicle();
+      Vehicle c3 = new Car(); // Car IS-A type of Vehicle
+      // Car bad = new Vehicle(); DOES NOT WORK!!
+      Vehicle scoot = new Scooter();
+      Vehicle moto = new Motorcycle();
+      Vehicle convertible = new Convertible();
+
+      // POLYMORPHISM example:
+      // Can store any subclass in a superclass-type collections
+      ArrayList<Vehicle> vehicleList = new ArrayList<Vehicle>();
+      vehicleList.add(v1);
+      vehicleList.add(v2);
+      vehicleList.add(v3);
+      vehicleList.add(c1);
+      vehicleList.add(c2);
+      vehicleList.add(c3);
+      vehicleList.add(moto);
+      vehicleList.add(scoot);
+      System.out.println(vehicleList);
+
+
+
+
+
+
       
 
 
